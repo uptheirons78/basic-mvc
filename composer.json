@@ -1,0 +1,15 @@
+{
+    "name": "mauro/basic-mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "mauro bono",
+            "email": "bono.mauro@gmail.com"
+        }
+    ],
+    "require": {}
+}
