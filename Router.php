@@ -24,7 +24,11 @@ class Router {
 
   public function resolve() {
     // Store the PATH inside a variable
-    $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+    $currentUrl = $_SERVER['REQUEST_URI'] ?? '/';
+
+    if (strpos($currentUrl, '?') !== false) {
+      $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
+    }
     // Store the method
     $method = $_SERVER['REQUEST_METHOD'];
     // Get the function from get or post routes arrays
